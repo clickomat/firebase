@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>GCE RR</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="newt-train">
+            <form action="" method="post">
+                <div class="header">
+                    <h1>Gram Central Electric Train Station</h1>
+                </div>
+                <div id="zulu"></div>
+
+<!-- stuck on getting this form submitted to the firebase datafields -->
+                <form role="form">
+                    <div class="form-group">
+                        <label for="train">Add Train:</label>
+                        <br>
+                        <input class="train-form" id="new-train" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="arivial">Add Arival:</label>
+                        <br>
+                        <input class="train-form" id="new-arivial" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="route">Add Route:</label>
+                        <br>
+                        <input class="train-form" id="new-route" type="text">
+                    </div>
+                    <button type="submit" id="add-route">Submit</button>
+                </form>
+                <br>
+                <button>
+                    <a href="index.html">
+                        <h3>Schedule</h3>
+                    </a>
+                </button>
+        </div>
+        <div class="footer">© Shawn Connell 2018</div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC6dxBNxv11cD-jaeeSMohtUxtFg5SmFQ4",
+            authDomain: "camp-out-activities.firebaseapp.com",
+            databaseURL: "https://camp-out-activities.firebaseio.com",
+            projectId: "camp-out-activities",
+            storageBucket: "camp-out-activities.appspot.com",
+            messagingSenderId: "501557293677"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script src="./assets/script.js"></script>
+    </body>
+
+</html>

@@ -4,7 +4,41 @@
   --third: #ff0000;
   --fourth: #b0460d; 
   --fifth:#670000;
+  --header:#999999;
 }
 body{
-    background-color: var(--fifth);
+    background-color: var(--main);
+    color: var(--header);
+}
+#zulu{
+   text-align: center;
+   padding: 20px;
+   font-size: 30px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid var(--third);
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd) {
+    background-color: var(--fourth);
+    color: var(--main);
+}
+
+tr:nth-child(even) {
+    background-color: var(--second);
+    color: var(--main);
+}
+
+
+table th, table td{
+    padding: 5px;
+    text-align: left;
 }

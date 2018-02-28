@@ -6,60 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- jquery -->
-    <script> src = "http://code.jquery.com/jquery-3.3.1.min.js"
+    <script> src = "https://code.jquery.com/jquery-3.3.1.min.js"
         integrity = "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin = "anonymous" ></script>
-    <title>Document</title>
+        crossorigin = "anonymous" </script>
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>GCE RR</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 
 <body>
 
 
-    <div class="container">
+    <div class="wrapper">
         <div class="header">
             <h1>Gram Central Electric Train Station</h1>
         </div>
-        <div class="arrivials">
-            <div id="time-in"></div>
+        
+        <div id="zulu"></div>
+        <div class="schedule-master" class content>
+            <table>
+                <tr>
+                    <th>Select</th>
+                    <th class="table-head" id="departures">Departures</th>
+                    <th class="table-head" id="train-name">Train</th>
+                    <th class="table-head" id="frequency">Frequency</th>
+                    <th class="table-head" id="next-arrivial">Expected Arrivial</th>
+                    <th class="table-head" id="arrives-in">Arrives</th>
+                    <th class="table-head" id="status">Status</th>
+
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="record"></td>
+                    <td class="table" id="departures-">Atom Alley</td>
+                    <td class="train" id="u92">U92</td>
+                    <td class="frequency" id="odd-hours">Odd hours.</td>
+                    <td class="next-arrival" id=train-time></td>
+                    <td class="arrives" id=arrivial-min></td>
+                    <td class="status" id="status"><strong>late</strong> </td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="record"></td>
+                    <td class="table" id="departures-">Copper Crossing</td>
+                    <td class="train" id="Cu29">Cu29</td>
+                    <td class="frequency" id="hourly">Hourly</td>
+                    <td class="next-arrival" id="train-time"></td>
+                    <td class="arrives" id="arrivial-min"></td>
+                    <td class="status" id="status"><strong>late</strong> </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="record"></td>
+                    <td class="table" id="departures-">Cascade Spring Steamer</td>
+                    <td class="train" id="c3p0">Choo three pew ohh</td>
+                    <td class="frequency">Hourly</td>
+                    <td class="next-arrival" id="train-time"></td>
+                    <td class="arrives" id="arrivial-min"></td>
+                    <td class="status" id="status"><strong>on time</strong> </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="record"></td>
+                    <td class="table" id="departures-">Sand Hill</td>
+                    <td class="train">Blue Cord</td>
+                    <td class="frequency">daily 1700</td>
+                    <td class="next-arrival" id="train-time"></td>
+                    <td class="arrives" id="arrivial-min"></td>
+                    <td class="status" id="status"><strong>late</strong> </td>
+                </tr>
+            </table>
+            <form>
+                    <input type="text" id="departures-add" placeholder="Departures">
+                    <input type="text" id="train-add" placeholder="train">
+                    <input type="text" id="frequency-add" placeholder="frequency">
+                    <input type="text" id="next-arivial-add" placeholder="Next Arivial">
+                    <input type="text" id="arives-add" placeholder="arives">
+                    <input type="text" id="status-add" placeholder="status">
+                    <input type="button" class="add-row" value="Add Row">
+                </form>
+                <button type="button" class="delete-row">Delete Row</button>
+
+
+
+
+
         </div>
-        <div id="departures">
-            <div id="time-out"></div>
-        </div>
-        <form action="/action_page.php">
-            First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
 
         <button>
-            <a href="newtrains.html"></a>
+            <a href="form.html" onmousedown="cargoSound.play()">
+                <h3>New Train</h3>
+            </a>
         </button>
-
+        <div class="footer">© Shawn Connell 2018</div>
     </div>
-
 
 
 
 
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script>
-  // Initialize Firebase
-  var config = {
-            apiKey: "AIzaSyARqZfYxYK24d7xSzcpfcwGmnuR-1KR09g",
-            authDomain: "project-black-bird.firebaseapp.com",
-            databaseURL: "https://project-black-bird.firebaseio.com",
-            projectId: "project-black-bird",
-            storageBucket: "project-black-bird.appspot.com",
-            messagingSenderId: "417036879972"
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC6dxBNxv11cD-jaeeSMohtUxtFg5SmFQ4",
+            authDomain: "camp-out-activities.firebaseapp.com",
+            databaseURL: "https://camp-out-activities.firebaseio.com",
+            projectId: "camp-out-activities",
+            storageBucket: "camp-out-activities.appspot.com",
+            messagingSenderId: "501557293677"
         };
         firebase.initializeApp(config);
     </script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
