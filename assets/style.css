@@ -1,0 +1,10 @@
+:root {
+  --main: #000000;
+  --second: #656565;
+  --third: #ff0000;
+  --fourth: #b0460d; 
+  --fifth:#670000;
+}
+body{
+    background-color: var(--fifth);
+}

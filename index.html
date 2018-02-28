@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jquery -->
+    <script> src = "http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity = "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin = "anonymous" ></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="header">
+            <h1>Gram Central Electric Train Station</h1>
+        </div>
+        <div class="arrivials">
+            <div id="time-in"></div>
+        </div>
+        <div id="departures">
+            <div id="time-out"></div>
+        </div>
+        <form action="/action_page.php">
+            First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <button>
+            <a href="newtrains.html"></a>
+        </button>
+
+    </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+            apiKey: "AIzaSyARqZfYxYK24d7xSzcpfcwGmnuR-1KR09g",
+            authDomain: "project-black-bird.firebaseapp.com",
+            databaseURL: "https://project-black-bird.firebaseio.com",
+            projectId: "project-black-bird",
+            storageBucket: "project-black-bird.appspot.com",
+            messagingSenderId: "417036879972"
+        };
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>
