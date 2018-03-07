@@ -26,7 +26,7 @@ $("#add-route").on("click", function() {
     .trim();
 
   // Change what is saved in firebase
-  database.ref().set({
+  database.ref().push({
     train: newTrain,
     arrivial: newArivial,
     route: newRoute,
