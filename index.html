@@ -12,6 +12,10 @@
     <!-- my css -->
     <link rel="stylesheet" href="./assets/style.css">
     <title>GCE RR</title>
+    <!-- momentJS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 
@@ -22,7 +26,7 @@
         <div class="header">
             <h1>Gram Central Electric Train Station</h1>
         </div>
-        
+
         <div id="zulu"></div>
         <div class="schedule-master" class content>
             <table>
@@ -36,54 +40,19 @@
                     <th class="table-head" id="status">Status</th>
 
                 </tr>
-                <tr>
-                    <td><input type="checkbox" name="record"></td>
-                    <td class="table" id="departures-">Atom Alley</td>
-                    <td class="train" id="u92">U92</td>
-                    <td class="frequency" id="odd-hours">Odd hours.</td>
-                    <td class="next-arrival" id=train-time></td>
-                    <td class="arrives" id=arrivial-min></td>
-                    <td class="status" id="status"><strong>late</strong> </td>
-                    
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="record"></td>
-                    <td class="table" id="departures-">Copper Crossing</td>
-                    <td class="train" id="Cu29">Cu29</td>
-                    <td class="frequency" id="hourly">Hourly</td>
-                    <td class="next-arrival" id="train-time"></td>
-                    <td class="arrives" id="arrivial-min"></td>
-                    <td class="status" id="status"><strong>late</strong> </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="record"></td>
-                    <td class="table" id="departures-">Cascade Spring Steamer</td>
-                    <td class="train" id="c3p0">Choo three pew ohh</td>
-                    <td class="frequency">Hourly</td>
-                    <td class="next-arrival" id="train-time"></td>
-                    <td class="arrives" id="arrivial-min"></td>
-                    <td class="status" id="status"><strong>on time</strong> </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="record"></td>
-                    <td class="table" id="departures-">Sand Hill</td>
-                    <td class="train">Blue Cord</td>
-                    <td class="frequency">daily 1700</td>
-                    <td class="next-arrival" id="train-time"></td>
-                    <td class="arrives" id="arrivial-min"></td>
-                    <td class="status" id="status"><strong>late</strong> </td>
-                </tr>
+                
+                
             </table>
             <form>
-                    <input type="text" id="departures-add" placeholder="Departures">
-                    <input type="text" id="train-add" placeholder="train">
-                    <input type="text" id="frequency-add" placeholder="frequency">
-                    <input type="text" id="next-arivial-add" placeholder="Next Arivial">
-                    <input type="text" id="arives-add" placeholder="arives">
-                    <input type="text" id="status-add" placeholder="status">
-                    <input type="button" class="add-row" value="Add Row">
-                </form>
-                <button type="button" class="delete-row">Delete Row</button>
+                <input type="text" id="departures-add" placeholder="Departures">
+                <input type="text" id="train-add" placeholder="train">
+                <input type="text" id="frequency-add" placeholder="frequency">
+                <input type="text" id="next-arivial-add" placeholder="Next Arivial">
+                <input type="text" id="arives-add" placeholder="arives">
+                <input type="text" id="status-add" placeholder="status">
+                <input type="button" class="add-row" value="Add Row" id="newRoute">
+            </form>
+            <button type="button" class="delete-row">Delete Row</button>
 
 
 
@@ -91,10 +60,7 @@
 
         </div>
 
-        <button>
-            <a href="form.html" onmousedown="cargoSound.play()">
-                <h3>New Train</h3>
-            </a>
+
         </button>
         <div class="footer">© Shawn Connell 2018</div>
     </div>
@@ -103,18 +69,19 @@
 
 
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCcaahGj-A82d_EQiijgo-L_9cKJBpjvc4",
-        authDomain: "trainschedule-e3b6a.firebaseapp.com",
-        databaseURL: "https://trainschedule-e3b6a.firebaseio.com",
-        projectId: "trainschedule-e3b6a",
-        storageBucket: "trainschedule-e3b6a.appspot.com",
-        messagingSenderId: "970921341649"
-      };
-      firebase.initializeApp(config);
-    </script>
+    <!-- <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCcaahGj-A82d_EQiijgo-L_9cKJBpjvc4",
+            authDomain: "trainschedule-e3b6a.firebaseapp.com",
+            databaseURL: "https://trainschedule-e3b6a.firebaseio.com",
+            projectId: "trainschedule-e3b6a",
+            storageBucket: "trainschedule-e3b6a.appspot.com",
+            messagingSenderId: "970921341649"
+        };
+        firebase.initializeApp(config);
+    </script> -->
+
     <script src="./assets/script.js"></script>
 </body>
 
